@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <!--font awesome-->
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"integrity="sha512-..."crossorigin="anonymous"referrerpolicy="no-referrer"/>
+
+    <!-- Google tag (gtag.js) google analytics-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NPC1NMQ4GQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-NPC1NMQ4GQ');
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="logolandin.ico" type="image/x-icon">
+    <link rel="icon" href="logolandin.webp" type="image/webp">
+
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benefícios de uma Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+
+    <!-- incluindo bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- incluindo aos -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
+</head>
+
+<body>
+
+    <script>
+        AOS.init();
+    </script>
+    <script>
+        //regulando a rolagem 
+        document.addEventListener('DOMContentLoaded', function () {
+            var scrollToContact = document.getElementById('scrollToContact');
+
+            scrollToContact.addEventListener('click', function (event) {
+                event.preventDefault(); // Previne o comportamento padrão do link
+
+                // Usa scrollIntoView com smooth scrolling
+                document.querySelector('#contato').scrollIntoView({
+                    behavior: 'smooth', // Rolagem suave
+                    block: 'end' // Centraliza o elemento na tela
+                });
+            });
+        });
+    </script>
+
+    <!-- Header -->
+    <header style="background-color: #0F1C2C;" class="text-white text-left">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="display-4">Por que sua empresa precisa de uma Landing Page?</h1>
+                    <p class="lead"><br>Veja como uma landing page pode aumentar suas vendas e melhorar suas campanhas de
+                        marketing</p>
+                    <a href="#contato" id="scrollToContact" class="btn btn-light btn-lg my-4">Quero criar minha landing
+                        page</a>
+                </div>
+
+                <div class="col-md-6">
+                    <img src="image/prime.webp" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sobre a Landing Page -->
+    <section class="pt-2 pt-md-5 mt-0 mt-md-5 pb-2">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-md-6 order-2 order-md-1" data-aos="fade-right">
+                    <img src="image/seco.webp" alt="Foco na Conversão" class="img-fluid">
+                </div>
+                <div class="col-md-6 p-3 order-1 order-md-2" data-aos="fade-left">
+                    <h3 class="pt-3">Afinal, o que é uma landing page?</h3>
+                    <p class="fs-5">Uma landing page é uma página feita para atingir um
+                        objetivo específico, como conseguir contatos, vender um produto,
+                        lançar promoções ou oferecer produtos diversificados. Ela direciona o visitante a fazer algo,
+                        como preencher um formulário ou comprar.<br><br>uma landing page é como uma vitrine 
+                        virtual do seu negócio — feita pra chamar atenção e levar a pessoa a fazer algo, como comprar, deixar o contato ou aproveitar uma promoção.</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Beneficios Features -->
+    <section>
+        <div class="container py-5">
+
+            <h2 class="text-center mb-5" data-aos="fade-up">
+                Solução Focada em Resultados e Experiência Personalizada
+            </h2>
+
+            <div class="row justify-content-center">
+                <div class="col-md-4 p-3" data-aos="fade-up" data-aos-delay="100">
+                    <h4>Foco na Conversão</h4>
+                    <p class="fs-5">Landing pages são feitas para guiar o visitante a realizar uma ação
+                        específica, como preencher um
+                        formulário ou adquirir um produto
+                    </p>
+                </div>
+                <div class="col-md-4 p-3" data-aos="fade-up" data-aos-delay="100">
+                    <h4>Maior Retorno sobre o Investimento</h4>
+                    <p class="fs-5">Cada clique conta. Direcione os visitantes para a ação certa e
+                        maximize o retorno dos seus
+                        investimentos
+                    </p>
+                </div>
+                <div class="col-md-4 p-3" data-aos="fade-up" data-aos-delay="100">
+                    <h4>Personalização de Experiência</h4>
+                    <p class="fs-5">Com uma landing page, você pode criar uma experiência personalizada
+                        para aumentar suas chances de
+                        sucesso
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container pt-5">
+            <!-- Benefício 1 -->
+            <div class="row mb-5">
+                <div class="col-md-6" data-aos="fade-left">
+                    <img src="image/tirt.webp" alt="Maior Retorno sobre o Investimento" class="img-fluid">
+                </div>
+                <div class="col-md-6 p-3" data-aos="fade-right">
+                    <h3 class="pt-3">Redução de Distrações</h3>
+                    <p class="fs-5">Diferente de um site completo, uma landing page mantém o foco do
+                        visitante em uma única ação, eliminando distrações desnecessárias. Isso aumenta a probabilidade
+                        de que o usuário realize a
+                        ação desejada, seja preencher um formulário ou comprar um produto.<br><br>ela foca só no que importa, 
+                        sem distrações. Isso aumenta muito as chances da pessoa fazer o que você quer.</p>
+                </div>
+            </div>
+            <!-- Benefício 2 -->
+            <div class="row mb-5">
+                <div class="col-md-6 p-3 order-2 order-md-1" data-aos="fade-left">
+                    <h3 class="pt-3">Foco Total no Público-Alvo</h3>
+                    <p class="fs-5">Uma landing page permite que você crie uma comunicação direcionada para
+                        o público certo. Com um design pensado nas necessidades específicas dos seus visitantes,
+                        é mais fácil capturar a atenção e gerar engajamento<br><br>Ela mantém o foco em uma única 
+                        proposta, sem distrações, o que torna a tomada de decisão mais rápida e eficaz.</p>
+                </div>
+                <div class="col-md-6 order-1 order-md-2" data-aos="fade-right">
+                    <img src="image/quart.webp" alt="Foco na Conversão" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resultados de trabalhos -->
+    <section class=" bg-light py-4 px-3">
+        
+        <div class="container">
+            <h2 class="text-center mb-3" data-aos="fade-up">Clientes Satisfeitos</h2>
+        </div>
+
+        <div class="container py-4">
+            <div class="row justify-content-center mb-5">
+                <div class="col-md-3 p-3 m-2" style="border: #5dbed177 1px solid; border-radius: 2rem;"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="jao.webp" class="img-fluid justify-content-left mb-4"
+                        style="border-radius: 50rem; width: 4rem;">
+                    <p style="font-size: 1.2rem; font-style: italic;">"Usar uma landing page aumentou minhas vendas em
+                        50% em apenas dois meses."— Renato Costa, dono de loja
+                        online
+                    </p>
+                </div>
+                <div class="col-md-3 p-3 m-2" style="border: #5dbed177 1px solid; border-radius: 2rem;"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="ana.webp" class="img-fluid justify-content-left mb-4"
+                        style="border-radius: 50rem; width: 4rem;">
+                    <p style="font-size: 1.2rem; font-style: italic;">"Foi impressionante como pudemos medir os
+                        resultados
+                        das nossas campanhas com precisão." — Fernanda Almeida, gerente de marketing
+                    </p>
+                </div>
+                <div class="col-md-3 p-3 m-2" style="border: #5dbed177 1px solid; border-radius: 2rem;"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <img src="pedro.webp" class="img-fluid justify-content-left mb-4"
+                        style="border-radius: 50rem; width: 4rem;">
+                    <p style="font-size: 1.2rem; font-style: italic;">Lançamos uma nova oferta e em uma semana tínhamos
+                        mais clientes do que tinhamos
+                        antes." — Bruno Martins, consultor de negócios
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Como funciona -->
+    <section class="py-5">
+        <div class="container py-5" data-aos="fade-left">
+            <h2 class="text-center mb-2">Como Funciona</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-3 px-5" data-aos="fade-left" data-aos-delay="100">
+                <h3>1</h3>
+                <h4>Escolha o objetivo</h4>
+                <p class="fs-5">Decida se quer conseguir mais contatos, aumentar suas vendas ou divulgar seu serviço
+                </p>
+            </div>
+            <div class="col-md-3 px-5" data-aos="fade-left" data-aos-delay="100">
+                <h3>2</h3>
+                <h4>Personalizamos seu Design</h4>
+                <p class="fs-5">Vamos criar uma página com o visual e a mensagem que mais conectam com seu público, do
+                    jeito que você deseja</p>
+            </div>
+            <div class="col-md-3 px-5" data-aos="fade-left" data-aos-delay="100">
+                <h3>3</h3>
+                <h4>Lance e Veja os Resultados</h4>
+                <p class="fs-5">Colocamos sua página no ar, e você começa a receber contatos e ver as vendas acontecerem
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Chamada para acao -->
+    <section class="bg-light py-5 text-center">
+        <div class="container py-5" data-aos="fade-up">
+            <h2 class="mb-4">Converta visitas em clientes. Comece sua landing page agora!</h2>
+            <p class="lead">Não perca a chance de transformar visitas em clientes. Com uma landing page eficaz, sua
+                empresa pode maximizar o potencial de cada campanha e alcançar os resultados que você espera. Vamos
+                conversar sobre como posso ajudar a criar a landing page perfeita para o seu negócio.</p>
+            <a id="contato" style="background-color: #0F1C2C; border: none; color: white;" href="https://wa.link/naw9ri"
+                class="btn btn-primary btn-lg">Entre em Contato <i class="fab fa-whatsapp"></i></a>
+        </div>
+    </section>
+
+    <!-- Perguntas frequentes -->
+    <section class="py-5">
+        <div class="container py-5">
+            <h2 class="text-center mb-5" data-aos="fade-up">Perguntas Frequentes</h2>
+            <div class="accordion" id="faqAccordion">
+                <!-- pergunta 1 -->
+                <div class="accordion-item" data-aos="fade-right" data-aos-delay="100">
+                    <h2 class="accordion-header" id="heading1">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse1" aria-expanded="false" aria-controls="collapse1">
+                            O que é uma landing page?
+                        </button>
+                    </h2>
+                    <div id="collapse1" class="accordion-collapse collapse" aria-labelledby="heading1"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            É uma página feita para conquistar visitantes e transformá-los em clientes
+                        </div>
+                    </div>
+                </div>
+                <!-- pergunta 2 -->
+                <div class="accordion-item" data-aos="fade-right" data-aos-delay="100">
+                    <h2 class="accordion-header" id="heading2">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                            Por que uma landing page é melhor que um site comum?
+                        </button>
+                    </h2>
+                    <div id="collapse2" class="accordion-collapse collapse" aria-labelledby="heading2"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Ela tem foco em uma ação, o que aumenta as chances de conquistar novos clientes
+                        </div>
+                    </div>
+                </div>
+                <!-- pergunta 3 -->
+                <div class="accordion-item" data-aos="fade-right" data-aos-delay="200">
+                    <h2 class="accordion-header" id="heading3">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                            Quanto custa criar uma landing page?
+                        </button>
+                    </h2>
+                    <div id="collapse3" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            O preço varia, mas o retorno vale o investimento
+                        </div>
+                    </div>
+                </div>
+                <!-- pergunta 4 -->
+                <div class="accordion-item" data-aos="fade-right" data-aos-delay="200">
+                    <h2 class="accordion-header" id="heading4">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                            Preciso de um site completo ou só uma landing page?
+                        </button>
+                    </h2>
+                    <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Se seu objetivo é uma ação específica, como vendas ou gerar contatos, a landing page é
+                            suficiente e mais eficaz
+                        </div>
+                    </div>
+                </div>
+                <!-- pergunta 5 -->
+                <div class="accordion-item" data-aos="fade-right" data-aos-delay="200">
+                    <h2 class="accordion-header" id="heading5">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                            Quem pode se beneficiar de uma landing page?
+                        </button>
+                    </h2>
+                    <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                        data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Qualquer empresa, profissional ou empreendedor que queira atrair mais
+                            clientes e gerar resultados pode se beneficiar de uma landing page
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p style="font-size: 0.8rem;" class="mb-0">&copy; 2024 Gabriel Ramos - Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
