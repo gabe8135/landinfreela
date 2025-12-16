@@ -13,7 +13,70 @@ img {
     border-radius: 2rem;
 }
 
-p{
+img {
+    border-radius: 1.5rem;
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 24px 0 rgba(90,62,200,0.08);
+    transition: transform 0.3s;
+}
+img:hover {
+    transform: scale(1.03);
+}
+
+
+p {
     margin-top: 1rem;
     margin-bottom: 1rem;
+    line-height: 1.7;
+    color: #22223b;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+    font-weight: 700;
+    color: #0F1C2C;
+    letter-spacing: -1px;
+}
+
+.btn, .btn-lg, .btn-primary {
+    border-radius: 2rem !important;
+    font-weight: 600;
+    box-shadow: 0 2px 12px 0 rgba(90,62,200,0.10);
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+.btn:hover, .btn:focus {
+    box-shadow: 0 4px 24px 0 rgba(90,62,200,0.18);
+    filter: brightness(0.97);
+}
+
+section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
+
+@media (max-width: 991px) {
+    h1.display-3 {
+        font-size: 2.2rem;
+    }
+    .container, .container-lg, .container-md, .container-sm, .container-xl {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    h1.display-3 {
+        font-size: 1.5rem;
+    }
+    h2, h3 {
+        font-size: 1.2rem;
+    }
+    .row {
+        gap: 1.5rem 0;
+    }
+    .btn-lg {
+        font-size: 1rem;
+        padding: 0.75rem 2rem;
+    }
 }
