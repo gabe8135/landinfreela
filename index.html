@@ -30,6 +30,11 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     <!-- incluindo bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
@@ -62,38 +67,97 @@
     </script>
 
     <!-- Header Moderno -->
-    <header class="bg-gradient-primary-to-secondary text-white py-5 position-relative overflow-hidden">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent mb-4" style="--bs-navbar-toggler-icon-bg: url('data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' viewBox=\'0 0 30 30\'><path stroke=\'white\' stroke-width=\'2\' stroke-linecap=\'round\' stroke-miterlimit=\'10\' d=\'M4 7h22M4 15h22M4 23h22\'/></svg>');">
+    <header class="hero-section position-relative overflow-hidden">
+
+        <!-- Elementos decorativos de fundo -->
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+        <div class="hero-blob hero-blob-3"></div>
+        <div class="hero-grid-overlay"></div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-transparent hero-navbar">
             <div class="container">
-                <a class="navbar-brand fw-bold fs-3" href="#">Landin<span style="color:#5dbed1">g</span>Pro</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand hero-brand" href="#">Landin<span class="hero-brand-accent">g</span>Pro</a>
+                <button class="navbar-toggler hero-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" style="color:#fff !important;" href="#">Início</a></li>
-                        <li class="nav-item"><a class="nav-link" style="color:#fff !important;" href="#contato">Contato</a></li>
+                    <ul class="navbar-nav ms-auto gap-2">
+                        <li class="nav-item"><a class="nav-link hero-nav-link" href="#">Início</a></li>
+                        <li class="nav-item"><a class="nav-link hero-nav-link" href="#contato">Contato</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <div class="container position-relative z-2">
-            <div class="row align-items-center">
+
+        <div class="container position-relative hero-content-wrapper" style="margin-top: 5.5rem;">
+            <div class="row align-items-center g-5">
+
+                <!-- Coluna de texto -->
                 <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-3 fw-bold mb-3">Sua empresa precisa de uma <span style="color:#fff; font-weight:600;">página simples que vende</span></h1>
-                    <p class="lead mb-4" style="color:#fff;">Descubra como uma página fácil pode ajudar você a vender mais e conquistar novos clientes, mesmo sem entender nada de internet.</p>
-                    <a href="#contato" id="scrollToContact" class="btn btn-lg shadow px-5 py-3" style="background-color:#fff; color:#0F1C2C; border:none; font-weight:600;">Quero minha página agora</a>
+
+                    <!-- Badge de destaque -->
+                    <div class="hero-badge d-inline-flex align-items-center gap-2 mb-4">
+                        <span class="hero-badge-dot"></span>
+                        <span>Especialista em Landing Pages</span>
+                    </div>
+
+                    <h1 class="hero-title mb-4">
+                        Sua empresa precisa de uma <span class="hero-title-highlight">página que realmente vende</span>
+                    </h1>
+
+                    <p class="hero-subtitle mb-5">
+                        Transforme visitantes em clientes com uma landing page profissional — feita para o seu negócio, sem complicação e com resultado real.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="hero-actions d-flex flex-wrap gap-3 justify-content-center justify-content-lg-start mb-5">
+                        <a href="#contato" id="scrollToContact" class="btn-hero-primary">
+                            Quero minha página agora
+                            <i class="fa-solid fa-arrow-right ms-2"></i>
+                        </a>
+                        <a href="#faqAccordion" class="btn-hero-secondary">
+                            Tirar dúvidas
+                        </a>
+                    </div>
+
+                    <!-- Estatísticas rápidas -->
+                    <div class="hero-stats d-flex gap-4 justify-content-center justify-content-lg-start">
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">50+</span>
+                            <span class="hero-stat-label">Projetos</span>
+                        </div>
+                        <div class="hero-stat-divider"></div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">100%</span>
+                            <span class="hero-stat-label">Satisfação</span>
+                        </div>
+                        <div class="hero-stat-divider"></div>
+                        <div class="hero-stat">
+                            <span class="hero-stat-number">3x</span>
+                            <span class="hero-stat-label">Mais Vendas</span>
+                        </div>
+                    </div>
                 </div>
+
+                <!-- Coluna de imagem -->
                 <div class="col-lg-6 text-center mt-4 mt-lg-0">
-                    <img src="image/prime.webp" class="img-fluid rounded-4 shadow-lg hero-img-animate" alt="Landing Page Hero">
+                    <div class="hero-image-wrapper">
+                        <div class="hero-image-glow"></div>
+                        <img src="image/prime.webp" class="img-fluid hero-img-animate hero-img-main" alt="Landing Page Hero">
+                        <div class="hero-float-card hero-float-card-1">
+                            <i class="fa-solid fa-chart-line text-success me-2"></i>
+                            <span>+247% conversões</span>
+                        </div>
+                    </div>
                 </div>
+
             </div>
         </div>
-        <div class="bg-shape position-absolute top-0 end-0 w-100 h-100 opacity-10" style="z-index:1;"></div>
     </header>
 
     <!-- Sobre a Landing Page Moderno -->
-    <section class="pt-5 pb-2" style="background-color:#f6f7fb;">
+    <section class="pt-5 pb-2 sect-modern" style="background-color:#f6f7fb;">
         <div class="container">
             <div class="row mb-5 align-items-center">
                 <div class="col-md-6 order-2 order-md-1" data-aos="fade-right">
@@ -109,7 +173,7 @@
 
     <!-- Benefícios Modernos -->
     <section class="bg-light py-5">
-        <div class="container">
+        <div class="container sect-modern">
             <h2 class="text-center mb-5 fw-bold" data-aos="fade-up">
                 Por que usar uma página simples?
             </h2>
@@ -137,32 +201,74 @@
                 </div>
             </div>
         </div>
-        <div class="container pt-5">
-            <!-- Benefício 1 Moderno -->
-            <div class="row mb-5 align-items-center" style="background-color:#f6f7fb; border-radius:1.5rem;">
-                <div class="col-md-6" data-aos="fade-left">
-                    <img src="image/tirt.webp" alt="Maior Retorno sobre o Investimento" class="img-fluid rounded-4 shadow">
-                </div>
-                <div class="col-md-6 p-3" data-aos="fade-right">
-                    <h3 class="pt-3 fw-bold">Redução de Distrações</h3>
-                    <p class="fs-5">Diferente de um site cheio de coisas, uma landing page mantém o foco em uma única ação. Isso aumenta muito as chances da pessoa fazer o que você quer, como preencher um formulário ou comprar.<br><br><span class="fw-semibold" style="color:#5a3ec8;">Ela foca só no que importa, sem distrações.</span></p>
-                </div>
-            </div>
-            <!-- Benefício 2 Moderno -->
-            <div class="row mb-5 align-items-center">
-                <div class="col-md-6 p-3 order-2 order-md-1" data-aos="fade-left">
-                    <h3 class="pt-3 fw-bold">Foco Total no Público-Alvo</h3>
-                    <p class="fs-5">A landing page fala direto com quem você quer atingir. Assim, fica mais fácil chamar atenção e conseguir clientes.<br><br><span class="fw-semibold" style="color:#5a3ec8;">Ela mantém o foco em uma única proposta, sem distrações.</span></p>
-                </div>
-                <div class="col-md-6 order-1 order-md-2" data-aos="fade-right">
-                    <img src="image/quart.webp" alt="Foco na Conversão" class="img-fluid rounded-4 shadow">
+        <div class="beneficios-dark-section position-relative overflow-hidden" style="margin-top: 3rem;">
+
+                <!-- Decoração de fundo -->
+                <div class="bd-grid-overlay"></div>
+                <div class="bd-blob bd-blob-a"></div>
+                <div class="bd-blob bd-blob-b"></div>
+
+                <div class="container position-relative" style="z-index:2;">
+
+                    <!-- Benefício 1 — Redução de Distrações -->
+                    <div class="row align-items-center g-5 py-5" data-aos="fade-up">
+                        <div class="col-md-6">
+                            <div class="bd-img-wrapper">
+                                <div class="bd-img-glow"></div>
+                                <img src="image/tirt.webp" alt="Redução de Distrações" class="img-fluid bd-img">
+                                <div class="bd-img-badge bd-img-badge-right">
+                                    <i class="fa-solid fa-shield-halved text-info me-2"></i>
+                                    <span>Zero Distrações</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ps-md-5" data-aos="fade-left">
+                            <div class="bd-label">
+                                <span class="bd-label-dot"></span>
+                                Benefício 01
+                            </div>
+                            <h3 class="bd-title">Redução de <span class="bd-title-accent">Distrações</span></h3>
+                            <p class="bd-text">Diferente de um site cheio de coisas, uma landing page mantém o foco em uma única ação. Isso aumenta muito as chances da pessoa fazer o que você quer, como preencher um formulário ou comprar.</p>
+                            <div class="bd-highlight">
+                                <i class="fa-solid fa-circle-check me-2" style="color:#5dbed1;"></i>
+                                Ela foca só no que importa, sem distrações.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Benefício 2 — Foco Total no Público-Alvo -->
+                    <div class="row align-items-center g-5 py-5" data-aos="fade-up">
+                        <div class="col-md-6 order-2 order-md-1 pe-md-5" data-aos="fade-right">
+                            <div class="bd-label">
+                                <span class="bd-label-dot" style="background:#a78bfa; box-shadow: 0 0 10px rgba(167,139,250,0.8);"></span>
+                                Benefício 02
+                            </div>
+                            <h3 class="bd-title">Foco Total no <span class="bd-title-accent bd-title-accent-purple">Público-Alvo</span></h3>
+                            <p class="bd-text">A landing page fala direto com quem você quer atingir. Assim, fica mais fácil chamar atenção e conseguir clientes de verdade.</p>
+                            <div class="bd-highlight">
+                                <i class="fa-solid fa-circle-check me-2" style="color:#a78bfa;"></i>
+                                Ela mantém o foco em uma única proposta, sem distrações.
+                            </div>
+                        </div>
+                        <div class="col-md-6 order-1 order-md-2">
+                            <div class="bd-img-wrapper">
+                                <div class="bd-img-glow bd-img-glow-purple"></div>
+                                <img src="image/quart.webp" alt="Foco no Público-Alvo" class="img-fluid bd-img">
+                                <div class="bd-img-badge bd-img-badge-left">
+                                    <i class="fa-solid fa-bullseye me-2" style="color:#a78bfa;"></i>
+                                    <span>Público Certo</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Resultados de trabalhos -->
-    <section class="bg-light py-4 px-3">
+    <section class="bg-light py-4 px-3 sect-modern">
         <div class="container">
             <h2 class="text-center mb-3" data-aos="fade-up">Clientes de Verdade, Resultados de Verdade</h2>
             <p class="text-center mb-5">Veja o que clientes reais disseram sobre meu trabalho:</p>
@@ -218,24 +324,24 @@
     </section>
 
     <!-- Como funciona -->
-    <section class="py-5">
+    <section class="py-5 sect-modern">
         <div class="container py-5" data-aos="fade-left">
             <h2 class="text-center mb-2">Como Funciona</h2>
                         <p class="text-center mb-4">Veja como é fácil ter sua página:</p>
         </div>
         <div class="row justify-content-center">
             <div class="col-md-3 px-5" data-aos="fade-left" data-aos-delay="100">
-                <h3>1</h3>
+                <h3 class="step-num">01</h3>
                 <h4>Escolha o objetivo</h4>
                 <p class="fs-5">Você escolhe: quer vender, receber contatos ou divulgar um serviço?</p>
             </div>
             <div class="col-md-3 px-5" data-aos="fade-left" data-aos-delay="100">
-                <h3>2</h3>
+                <h3 class="step-num">02</h3>
                 <h4>Personalizamos seu Design</h4>
                 <p class="fs-5">Eu crio a página com o visual e a mensagem que combinam com seu público.</p>
             </div>
             <div class="col-md-3 px-5" data-aos="fade-left" data-aos-delay="100">
-                <h3>3</h3>
+                <h3 class="step-num">03</h3>
                 <h4>Lance e Veja os Resultados</h4>
                 <p class="fs-5">Coloco a página no ar e você começa a receber contatos e vendas.</p>
             </div>
@@ -243,17 +349,27 @@
     </section>
 
     <!-- Chamada para acao -->
-    <section class="bg-light py-5 text-center">
-        <div class="container py-5" data-aos="fade-up">
-            <h2 class="mb-4">Converta visitas em clientes. Comece sua landing page agora!</h2>
-            <p class="lead">Transforme visitantes em clientes. Peça sua página agora mesmo e veja o resultado na prática!</p>
-            <a id="contato" style="background-color: #0F1C2C; border: none; color: white;" href="https://wa.link/naw9ri"
-                class="btn btn-primary btn-lg">Entre em Contato <i class="fab fa-whatsapp"></i></a>
+    <section class="cta-dark-section position-relative overflow-hidden">
+        <div class="cta-grid-overlay"></div>
+        <div class="cta-blob cta-blob-a"></div>
+        <div class="cta-blob cta-blob-b"></div>
+        <div class="container position-relative cta-content" data-aos="fade-up">
+            <div class="cta-badge d-inline-flex align-items-center gap-2 mb-4">
+                <span class="cta-badge-dot"></span>
+                <span>Pronto para começar?</span>
+            </div>
+            <h2 class="cta-title mb-3">Converta visitas em clientes.<br><span class="cta-title-accent">Comece sua landing page agora!</span></h2>
+            <p class="cta-subtitle mb-5">Transforme visitantes em clientes. Peça sua página agora mesmo e veja o resultado na prática!</p>
+            <a id="contato" href="https://wa.link/naw9ri" class="btn-hero-primary">
+                <i class="fab fa-whatsapp me-2"></i>
+                Entre em Contato
+                <i class="fa-solid fa-arrow-right ms-2"></i>
+            </a>
         </div>
     </section>
 
     <!-- Perguntas frequentes -->
-    <section class="py-5">
+    <section class="py-5 sect-modern">
         <div class="container py-5">
             <h2 class="text-center mb-5" data-aos="fade-up">Perguntas Frequentes</h2>
                             <p class="text-center mb-5">Dúvidas comuns de quem nunca ouviu falar em landing page:</p>
@@ -337,19 +453,79 @@
         </div>
     </section>
 
-    <!-- Footer Moderno -->
-    <footer class="bg-dark text-white text-center py-4 mt-5 border-top border-secondary-subtle">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6 text-md-start mb-2 mb-md-0">
-                    <p class="mb-0" style="font-size: 0.9rem;">&copy; 2024 Gabriel Ramos - Todos os direitos reservados.</p>
+    <!-- Footer -->
+    <footer class="site-footer position-relative overflow-hidden">
+        <div class="footer-grid-overlay"></div>
+        <div class="footer-blob footer-blob-a"></div>
+        <div class="footer-blob footer-blob-b"></div>
+
+        <div class="container position-relative" style="z-index:2;">
+
+            <!-- Topo do footer -->
+            <div class="row g-5 footer-top">
+
+                <!-- Marca -->
+                <div class="col-lg-4">
+                    <a class="footer-brand" href="#">Landin<span>g</span>Pro</a>
+                    <p class="footer-desc">Criação de landing pages profissionais para quem quer vender mais e atrair novos clientes, sem complicação.</p>
                 </div>
-                <div class="col-md-6 text-md-end">
-                    <a href="#" class="text-white me-3"><i class="fab fa-instagram fa-lg"></i></a>
-                    <a href="#" class="text-white me-3"><i class="fab fa-linkedin fa-lg"></i></a>
-                    <a href="#" class="text-white"><i class="fab fa-whatsapp fa-lg"></i></a>
+
+                <!-- Contato -->
+                <div class="col-lg-4">
+                    <h5 class="footer-heading">Fale Comigo</h5>
+                    <ul class="footer-contact-list">
+                        <li>
+                            <a href="https://wa.me/5513997399924" target="_blank" rel="noopener noreferrer" class="footer-contact-link">
+                                <span class="footer-contact-icon" style="background:rgba(37,211,102,0.12); color:#25d366;">
+                                    <i class="fab fa-whatsapp"></i>
+                                </span>
+                                <span>(13) 99739-9924</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:gabriel@synaliz.com" class="footer-contact-link">
+                                <span class="footer-contact-icon" style="background:rgba(93,190,209,0.12); color:#5dbed1;">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </span>
+                                <span>gabriel@synaliz.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://synaliz.com" target="_blank" rel="noopener noreferrer" class="footer-contact-link">
+                                <span class="footer-contact-icon" style="background:rgba(167,139,250,0.12); color:#a78bfa;">
+                                    <i class="fa-solid fa-globe"></i>
+                                </span>
+                                <span>synaliz.com</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Links rápidos -->
+                <div class="col-lg-4">
+                    <h5 class="footer-heading">Navegação</h5>
+                    <ul class="footer-links-list">
+                        <li><a href="#" class="footer-link"><i class="fa-solid fa-chevron-right me-2" style="font-size:0.7rem;"></i>Início</a></li>
+                        <li><a href="#faqAccordion" class="footer-link"><i class="fa-solid fa-chevron-right me-2" style="font-size:0.7rem;"></i>Perguntas Frequentes</a></li>
+                        <li><a href="https://wa.link/naw9ri" target="_blank" rel="noopener noreferrer" class="footer-link"><i class="fa-solid fa-chevron-right me-2" style="font-size:0.7rem;"></i>Solicitar Orçamento</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Divider -->
+            <div class="footer-divider"></div>
+
+            <!-- Base do footer -->
+            <div class="row align-items-center footer-bottom">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="footer-copy">&copy; 2026 Gabriel Ramos — Todos os direitos reservados.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-2 mt-md-0">
+                    <a href="https://synaliz.com" target="_blank" rel="noopener noreferrer" class="footer-synaliz-link">synaliz</a>
                 </div>
             </div>
+
         </div>
     </footer>
 
@@ -357,36 +533,706 @@
 </body>
 
     <style>
-        /* Força branco no ícone do menu sanduíche */
-        .navbar-toggler {
-            border-color: rgba(255,255,255,0.7) !important;
+        /* ====== HERO SECTION — REDESIGN MODERNO ====== */
+
+        .hero-section {
+            background: linear-gradient(135deg, #060d1a 0%, #0c1e3a 50%, #091830 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 5rem;
         }
-        .navbar-toggler-icon {
+
+        /* Grid overlay techno */
+        .hero-grid-overlay {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(93,190,209,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(93,190,209,0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Blobs animados */
+        .hero-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .hero-blob-1 {
+            width: 650px; height: 650px;
+            background: radial-gradient(circle, rgba(93,190,209,0.18) 0%, transparent 70%);
+            top: -200px; right: -180px;
+            animation: blobDrift 9s ease-in-out infinite;
+        }
+        .hero-blob-2 {
+            width: 450px; height: 450px;
+            background: radial-gradient(circle, rgba(90,62,200,0.14) 0%, transparent 70%);
+            bottom: -80px; left: -120px;
+            animation: blobDrift 12s ease-in-out infinite reverse;
+        }
+        .hero-blob-3 {
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(93,190,209,0.1) 0%, transparent 70%);
+            top: 40%; left: 40%;
+            animation: blobDrift 7s ease-in-out infinite 2s;
+        }
+        @keyframes blobDrift {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            33%       { transform: translate(25px, -35px) scale(1.06); }
+            66%       { transform: translate(-18px, 18px) scale(0.97); }
+        }
+
+        /* Navbar hero */
+        .hero-navbar { padding: 1.5rem 0; position: relative; z-index: 10; }
+        .hero-brand {
+            font-size: 1.7rem;
+            font-weight: 800;
+            color: #fff !important;
+            letter-spacing: -1px;
+        }
+        .hero-brand-accent { color: #5dbed1; }
+        .hero-nav-link {
+            color: rgba(255,255,255,0.8) !important;
+            font-weight: 500;
+            transition: color 0.2s;
+            padding: 0.5rem 1rem !important;
+            border-radius: 50px;
+        }
+        .hero-nav-link:hover { color: #fff !important; background: rgba(255,255,255,0.08); }
+        .hero-toggler {
+            border-color: rgba(255,255,255,0.4) !important;
+        }
+        .hero-toggler .navbar-toggler-icon {
             background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'><path stroke='white' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/></svg>") !important;
         }
-        /* Força branco nos links do menu */
-        .navbar-nav .nav-link,
-        .navbar-nav .nav-link:visited,
-        .navbar-nav .nav-link:active,
-        .navbar-nav .nav-link:focus,
-        .navbar-nav .nav-link:hover {
-            color: #fff !important;
-            text-shadow: 0 1px 8px rgba(0,0,0,0.12);
+
+        /* Conteúdo principal */
+        .hero-content-wrapper { padding-top: 2rem; padding-bottom: 2rem; position: relative; z-index: 2; }
+
+        /* Badge */
+        .hero-badge {
+            background: rgba(93,190,209,0.1);
+            border: 1px solid rgba(93,190,209,0.35);
+            color: #5dbed1;
+            border-radius: 50px;
+            padding: 0.45rem 1.2rem;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.6px;
+            backdrop-filter: blur(12px);
         }
-        .bg-gradient-primary-to-secondary {
-            background: linear-gradient(120deg, #0F1C2C 0%, #5dbed1 100%);
+        .hero-badge-dot {
+            width: 8px; height: 8px;
+            background: #5dbed1;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(93,190,209,0.8);
+            animation: dotPulse 2s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+        @keyframes dotPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50%       { opacity: 0.5; transform: scale(0.75); }
+        }
+
+        /* Título */
+        .hero-title {
+            font-size: clamp(2rem, 4.2vw, 3.6rem);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.13;
+            letter-spacing: -1.5px;
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+        }
+        .hero-title-highlight {
+            background: linear-gradient(135deg, #5dbed1 0%, #a78bfa 60%, #f472b6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Subtítulo */
+        .hero-subtitle {
+            font-size: 1.12rem;
+            color: rgba(255,255,255,0.65);
+            line-height: 1.85;
+            max-width: 500px;
+        }
+
+        /* Botões */
+        .btn-hero-primary {
+            display: inline-flex;
+            align-items: center;
+            background: linear-gradient(135deg, #5dbed1 0%, #3a9bb8 100%);
+            color: #fff;
+            padding: 0.95rem 2rem;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.95rem;
+            text-decoration: none;
+            box-shadow: 0 8px 30px rgba(93,190,209,0.4);
+            transition: transform 0.25s, box-shadow 0.25s;
+            position: relative; overflow: hidden;
+        }
+        .btn-hero-primary::after {
+            content: '';
+            position: absolute; inset: 0;
+            background: linear-gradient(135deg, rgba(255,255,255,0.18), transparent);
+            opacity: 0; transition: opacity 0.25s;
+        }
+        .btn-hero-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 40px rgba(93,190,209,0.55);
+            color: #fff;
+        }
+        .btn-hero-primary:hover::after { opacity: 1; }
+
+        .btn-hero-secondary {
+            display: inline-flex;
+            align-items: center;
+            background: transparent;
+            color: rgba(255,255,255,0.8);
+            padding: 0.95rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            transition: all 0.25s;
+        }
+        .btn-hero-secondary:hover {
+            background: rgba(255,255,255,0.07);
+            border-color: rgba(255,255,255,0.45);
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        /* Stats */
+        .hero-stat { display: flex; flex-direction: column; align-items: center; }
+        .hero-stat-number {
+            font-size: 1.65rem; font-weight: 800; color: #fff; line-height: 1;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-stat-label {
+            font-size: 0.72rem; color: rgba(255,255,255,0.45);
+            text-transform: uppercase; letter-spacing: 1.2px; margin-top: 0.2rem;
+        }
+        .hero-stat-divider { width: 1px; height: 40px; background: rgba(255,255,255,0.15); align-self: center; }
+
+        /* Imagem hero */
+        .hero-image-wrapper { position: relative; display: inline-block; }
+        .hero-image-glow {
+            position: absolute; inset: -25px;
+            background: radial-gradient(circle, rgba(93,190,209,0.22) 0%, transparent 70%);
+            border-radius: 2rem;
+            pointer-events: none;
+            animation: glowBreath 3.5s ease-in-out infinite;
+        }
+        @keyframes glowBreath {
+            0%, 100% { opacity: 0.6; transform: scale(1); }
+            50%       { opacity: 1; transform: scale(1.04); }
+        }
+        .hero-img-main {
+            position: relative; z-index: 2;
+            border-radius: 1.5rem !important;
+            border: 1px solid rgba(93,190,209,0.25);
+            box-shadow: 0 24px 80px rgba(0,0,0,0.5) !important;
         }
         .hero-img-animate {
-            animation: float 3s ease-in-out infinite;
+            animation: floatImg 4s ease-in-out infinite;
         }
-        @keyframes float {
-            0% { transform: translateY(0); }
-            50% { transform: translateY(-18px); }
-            100% { transform: translateY(0); }
+        @keyframes floatImg {
+            0%, 100% { transform: translateY(0); }
+            50%       { transform: translateY(-16px); }
         }
-        .bg-shape {
-            background: radial-gradient(circle at 80% 20%, #5dbed1 0%, transparent 70%);
+
+        /* Floating cards */
+        .hero-float-card {
+            position: absolute;
+            background: rgba(255,255,255,0.07);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 50px;
+            padding: 0.55rem 1.2rem;
+            color: #fff;
+            font-size: 0.83rem;
+            font-weight: 600;
+            white-space: nowrap;
+            z-index: 3;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+        }
+        .hero-float-card-1 {
+            top: 12%; right: -8px;
+            animation: floatCard1 4.5s ease-in-out infinite;
+        }
+        .hero-float-card-2 {
+            bottom: 14%; left: -8px;
+            animation: floatCard2 5.5s ease-in-out infinite;
+        }
+        @keyframes floatCard1 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+        @keyframes floatCard2 { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(10px); } }
+
+        /* Responsivo */
+        @media (max-width: 991px) {
+            .hero-section { min-height: auto; padding-bottom: 3.5rem; }
+            .hero-float-card { display: none; }
+            .hero-subtitle { max-width: 100%; }
+        }
+        @media (max-width: 767px) {
+            .hero-title { font-size: 1.85rem; letter-spacing: -0.5px; }
+            .hero-stats { justify-content: center; }
+            .hero-stat-number { font-size: 1.35rem; }
+        }
+
+        /* ====== SEÇÕES DE BENEFÍCIOS DARK ====== */
+
+        .beneficios-dark-section {
+            background: linear-gradient(160deg, #070e1c 0%, #0b1a30 55%, #0d1f38 100%);
+            padding: 1rem 0 2rem;
+            margin-top: -1px;
+        }
+
+        /* Grid overlay sutil — diferente do hero (sem linhas, só pontos) */
+        .bd-grid-overlay {
+            position: absolute; inset: 0;
+            background-image: radial-gradient(rgba(93,190,209,0.07) 1px, transparent 1px);
+            background-size: 40px 40px;
             pointer-events: none;
+            z-index: 1;
+        }
+
+        /* Blobs com cores distintas do hero */
+        .bd-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .bd-blob-a {
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(167,139,250,0.14) 0%, transparent 70%);
+            top: 0; left: -150px;
+            animation: blobDrift 11s ease-in-out infinite;
+        }
+        .bd-blob-b {
+            width: 420px; height: 420px;
+            background: radial-gradient(circle, rgba(93,190,209,0.12) 0%, transparent 70%);
+            bottom: 0; right: -100px;
+            animation: blobDrift 14s ease-in-out infinite reverse 3s;
+        }
+
+        /* Separador entre rows */
+        .bd-row-divider {
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            margin-bottom: 0 !important;
+        }
+
+        /* Label de benefício */
+        .bd-label {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #5dbed1;
+            margin-bottom: 0.85rem;
+        }
+        .bd-label-dot {
+            width: 8px; height: 8px;
+            background: #5dbed1;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(93,190,209,0.8);
+            flex-shrink: 0;
+            animation: dotPulse 2s ease-in-out infinite;
+        }
+
+        /* Título */
+        .bd-title {
+            font-size: clamp(1.6rem, 3vw, 2.3rem);
+            font-weight: 800;
+            color: #ffffff;
+            line-height: 1.2;
+            letter-spacing: -0.8px;
+            margin-bottom: 1rem;
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+        }
+        .bd-title-accent {
+            background: linear-gradient(135deg, #5dbed1 0%, #3a9bb8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .bd-title-accent-purple {
+            background: linear-gradient(135deg, #a78bfa 0%, #c084fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Texto */
+        .bd-text {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.85;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Highlight */
+        .bd-highlight {
+            display: inline-flex;
+            align-items: center;
+            background: rgba(93,190,209,0.07);
+            border: 1px solid rgba(93,190,209,0.2);
+            border-radius: 50px;
+            padding: 0.55rem 1.3rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.85);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Imagem wrapper */
+        .bd-img-wrapper { position: relative; display: inline-block; width: 100%; }
+        .bd-img-glow {
+            position: absolute; inset: -20px;
+            background: radial-gradient(circle, rgba(93,190,209,0.18) 0%, transparent 65%);
+            border-radius: 2rem;
+            pointer-events: none;
+            animation: glowBreath 4s ease-in-out infinite;
+        }
+        .bd-img-glow-purple {
+            background: radial-gradient(circle, rgba(167,139,250,0.18) 0%, transparent 65%);
+        }
+        .bd-img {
+            position: relative; z-index: 2;
+            border-radius: 1.5rem !important;
+            border: 1px solid rgba(255,255,255,0.1);
+            box-shadow: 0 20px 60px rgba(0,0,0,0.45) !important;
+            transition: transform 0.35s ease;
+        }
+        .bd-img:hover { transform: scale(1.02); }
+
+        /* Badge flutuante na imagem */
+        .bd-img-badge {
+            position: absolute;
+            bottom: 16px;
+            background: rgba(255,255,255,0.07);
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            border: 1px solid rgba(255,255,255,0.14);
+            border-radius: 50px;
+            padding: 0.5rem 1.1rem;
+            color: #fff;
+            font-size: 0.82rem;
+            font-weight: 600;
+            white-space: nowrap;
+            z-index: 3;
+            box-shadow: 0 6px 24px rgba(0,0,0,0.3);
+        }
+        .bd-img-badge-right { right: 16px; }
+        .bd-img-badge-left  { left: 16px; }
+
+        @media (max-width: 767px) {
+            .bd-title { font-size: 1.5rem; }
+            .bd-img-badge { display: none; }
+            .bd-highlight { font-size: 0.82rem; }
+        }
+
+        /* ====== SEÇÃO CTA DARK ====== */
+        .cta-dark-section {
+            background: linear-gradient(160deg, #07101f 0%, #0b1a30 60%, #0d1f38 100%);
+            padding: 6rem 0;
+            text-align: center;
+        }
+        .cta-grid-overlay {
+            position: absolute; inset: 0;
+            background-image:
+                linear-gradient(rgba(93,190,209,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(93,190,209,0.04) 1px, transparent 1px);
+            background-size: 60px 60px;
+            pointer-events: none; z-index: 1;
+        }
+        .cta-blob {
+            position: absolute; border-radius: 50%;
+            filter: blur(100px); pointer-events: none; z-index: 1;
+        }
+        .cta-blob-a {
+            width: 500px; height: 500px;
+            background: radial-gradient(circle, rgba(93,190,209,0.16) 0%, transparent 70%);
+            top: -150px; left: -100px;
+            animation: blobDrift 10s ease-in-out infinite;
+        }
+        .cta-blob-b {
+            width: 400px; height: 400px;
+            background: radial-gradient(circle, rgba(167,139,250,0.14) 0%, transparent 70%);
+            bottom: -100px; right: -80px;
+            animation: blobDrift 13s ease-in-out infinite reverse;
+        }
+        .cta-content { position: relative; z-index: 2; }
+        .cta-badge {
+            background: rgba(93,190,209,0.1);
+            border: 1px solid rgba(93,190,209,0.35);
+            color: #5dbed1;
+            border-radius: 50px;
+            padding: 0.45rem 1.2rem;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.6px;
+            backdrop-filter: blur(12px);
+        }
+        .cta-badge-dot {
+            width: 8px; height: 8px;
+            background: #5dbed1; border-radius: 50%;
+            box-shadow: 0 0 10px rgba(93,190,209,0.8);
+            animation: dotPulse 2s ease-in-out infinite;
+            flex-shrink: 0;
+        }
+        .cta-title {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 800;
+            color: #fff;
+            line-height: 1.2;
+            letter-spacing: -1px;
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+        }
+        .cta-title-accent {
+            background: linear-gradient(135deg, #5dbed1 0%, #a78bfa 60%, #f472b6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .cta-subtitle {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.6);
+            line-height: 1.8;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        /* ====== FOOTER DARK ====== */
+        .site-footer {
+            background: linear-gradient(160deg, #040a14 0%, #070e1c 100%);
+            padding: 4rem 0 0;
+            margin-top: -1px;
+        }
+        .footer-grid-overlay {
+            position: absolute; inset: 0;
+            background-image: radial-gradient(rgba(93,190,209,0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none; z-index: 1;
+        }
+        .footer-blob {
+            position: absolute; border-radius: 50%;
+            filter: blur(110px); pointer-events: none; z-index: 1;
+        }
+        .footer-blob-a {
+            width: 380px; height: 380px;
+            background: radial-gradient(circle, rgba(93,190,209,0.08) 0%, transparent 70%);
+            top: 0; right: 0;
+        }
+        .footer-blob-b {
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(167,139,250,0.08) 0%, transparent 70%);
+            bottom: 0; left: 0;
+        }
+        .footer-top { padding: 2rem 0 3rem; }
+        .footer-brand {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #fff;
+            text-decoration: none;
+            letter-spacing: -1px;
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        .footer-brand span { color: #5dbed1; }
+        .footer-desc {
+            font-size: 0.92rem;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.8;
+            margin: 0;
+        }
+        .footer-heading {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            margin-bottom: 1.2rem;
+        }
+        .footer-contact-list, .footer-links-list {
+            list-style: none;
+            padding: 0; margin: 0;
+            display: flex; flex-direction: column; gap: 0.75rem;
+        }
+        .footer-contact-link, .footer-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: rgba(255,255,255,0.65);
+            text-decoration: none;
+            font-size: 0.93rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .footer-contact-link:hover, .footer-link:hover { color: #fff; }
+        .footer-contact-icon {
+            width: 36px; height: 36px;
+            border-radius: 10px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+        .footer-divider {
+            border-top: 1px solid rgba(255,255,255,0.07);
+            margin: 0;
+        }
+        .footer-bottom { padding: 1.5rem 0; }
+        .footer-copy {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.3);
+            margin: 0;
+        }
+        .footer-made {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.3);
+        }
+        @media (max-width: 767px) {
+            .cta-dark-section { padding: 4rem 0; }
+            .cta-title { font-size: 1.6rem; }
+            .site-footer { padding: 3rem 0 0; }
+        }
+
+        /* ====== TIPOGRAFIA MODERNA — SEÇÕES CLARAS ====== */
+
+        .sect-modern h2 {
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+            font-weight: 800;
+            letter-spacing: -1.2px;
+            line-height: 1.18;
+            color: #0F1C2C;
+        }
+        .sect-modern h3 {
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.6px;
+            line-height: 1.22;
+            color: #0F1C2C;
+        }
+        .sect-modern h4 {
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            line-height: 1.3;
+            color: #0F1C2C;
+        }
+        .sect-modern p, .sect-modern .fs-5 {
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+            font-size: 1.03rem !important;
+            line-height: 1.85;
+            color: #3a3a5c;
+        }
+
+        /* Cards modernos */
+        .sect-modern .card {
+            border-radius: 1.25rem !important;
+            border: 1px solid rgba(15,28,44,0.06) !important;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .sect-modern .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 18px 48px rgba(15,28,44,0.11) !important;
+        }
+        .sect-modern .card h4 {
+            font-size: 1.05rem;
+            letter-spacing: -0.2px;
+        }
+
+        /* Números das etapas */
+        .step-num {
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif !important;
+            font-size: 4.5rem !important;
+            font-weight: 900 !important;
+            letter-spacing: -4px !important;
+            line-height: 1 !important;
+            background: linear-gradient(135deg, #5dbed1 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.75rem;
+            display: block;
+        }
+
+        /* Depoimentos */
+        .sect-modern .testimonial-card p {
+            font-size: 0.97rem !important;
+            line-height: 1.8;
+            font-style: italic;
+            color: #22223b;
+        }
+        .sect-modern .testimonial-card .fw-bold {
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+            font-weight: 800;
+            letter-spacing: -0.3px;
+        }
+        .sect-modern .testimonial-card .text-muted {
+            font-size: 0.8rem;
+            letter-spacing: 0.3px;
+        }
+
+        /* Accordion moderno */
+        .sect-modern .accordion-button {
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            font-size: 0.98rem;
+            color: #0F1C2C;
+        }
+        .sect-modern .accordion-button:not(.collapsed) {
+            color: #5dbed1;
+            background: rgba(93,190,209,0.05);
+            box-shadow: none;
+        }
+        .sect-modern .accordion-item {
+            border-radius: 0.9rem !important;
+            margin-bottom: 0.6rem;
+            border: 1px solid rgba(15,28,44,0.08) !important;
+            overflow: hidden;
+        }
+        .sect-modern .accordion-body {
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+            font-size: 0.95rem;
+            color: #3a3a5c;
+            line-height: 1.75;
+        }
+
+        /* Link synaliz no footer */
+        .footer-synaliz-link {
+            font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+            font-size: 0.88rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: lowercase;
+            color: rgba(255,255,255,0.25);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer-synaliz-link:hover { color: #5dbed1; }
+
+        @media (max-width: 767px) {
+            .step-num { font-size: 3rem !important; letter-spacing: -2px !important; }
         }
     </style>
 </html>
